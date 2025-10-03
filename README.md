@@ -46,8 +46,7 @@ Customer-Churn-Prediction/
 │── requirements.txt # Dependencies
 │── README.md # Project documentation
 
-yaml
-Copy code
+
 
 ---
 
@@ -67,25 +66,20 @@ If needed, you can import the CSV into a database like MySQL/Postgres and update
 ▶️ How to Run Locally
 Clone the Repository
 
-bash
-Copy code
 git clone https://github.com/vishred06-cmd/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
 Create Virtual Environment (optional but recommended)
 
-bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
 Install Dependencies
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Run the Jupyter Notebook
 
-bash
-Copy code
+
 jupyter notebook Telco-Customer-Churn-Prediction.ipynb
 👉 Alternatively, open the HTML file:
 Telco-Customer-Churn-Prediction.html in your browser to view results directly.
@@ -103,3 +97,4 @@ This project is licensed under the MIT License. You are free to use, modify, and
 Dataset: IBM Telco Customer Churn Dataset (commonly available via Kaggle).
 
 Thanks to open-source contributors of Scikit-learn, XGBoost, LightGBM, CatBoost, and Optuna.
+
