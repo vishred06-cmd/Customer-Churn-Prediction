@@ -28,23 +28,7 @@ This project predicts customer churn using the **Telco Customer Churn dataset**.
   - `catboost`  
   - `optuna`  
   - `numpy`, `pandas`  
-  - `matplotlib`, `seaborn`, `plotly`  
-
----
-
-## 📂 Project Structure
-
-Customer-Churn-Prediction/
-│── Telco-Customer-Churn-dataset-cleaned.csv # Cleaned dataset
-│── Telco-Customer-Churn-Prediction.ipynb # Main Jupyter Notebook
-│── Telco-Customer-Churn-Prediction.html # Notebook HTML export
-│── XGB_Hyperparameter.pickle # Saved XGBoost best params
-│── LGBM_Hyperparameter.pickle # Saved LightGBM best params
-│── CatBoost_Hyperparameter.pickle # Saved CatBoost best params
-│── model_catboost/ # Trained CatBoost model files
-│── catboost_info/ # CatBoost logs/info
-│── requirements.txt # Dependencies
-│── README.md # Project documentation
+  - `matplotlib`, `seaborn`, `plotly`
 
 
 
@@ -63,7 +47,8 @@ Data is already provided in CSV format: Telco-Customer-Churn-dataset-cleaned.csv
 
 If needed, you can import the CSV into a database like MySQL/Postgres and update the notebook to fetch from there.
 
-▶️ How to Run Locally
+
+How to Run Locally
 Clone the Repository
 
 git clone https://github.com/vishred06-cmd/Customer-Churn-Prediction.git
@@ -81,6 +66,7 @@ Run the Jupyter Notebook
 
 
 jupyter notebook Telco-Customer-Churn-Prediction.ipynb
+
 👉 Alternatively, open the HTML file:
 Telco-Customer-Churn-Prediction.html in your browser to view results directly.
 
@@ -97,4 +83,5 @@ This project is licensed under the MIT License. You are free to use, modify, and
 Dataset: IBM Telco Customer Churn Dataset (commonly available via Kaggle).
 
 Thanks to open-source contributors of Scikit-learn, XGBoost, LightGBM, CatBoost, and Optuna.
+
 
