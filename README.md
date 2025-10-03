@@ -1,91 +1,105 @@
-<<<<<<< HEAD
-# IBM Telco Customer Churn Prediction
-[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter)](https://jupyter.org/try) [![Open in HTML](https://img.shields.io/badge/Html-Open%20Notebook-blue?logo=HTML5)](https://nbviewer.org/github/ahmedshahriar/Customer-Churn-Prediction/blob/main/Telco-Customer-Churn-Prediction.html) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahmedshahriar/Customer-Churn-Prediction/main) [![Live in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io//ahmedshahriar/Telco-Customer-Churn-Prediction-Streamlit-App/main/app.py)
+# 📊 Customer Churn Prediction
 
-The objective of this notebook is to present an extensive analysis of the **IBM Customer Churn Dataset** and to predict the customer churn rate.
+This project predicts customer churn using the **Telco Customer Churn dataset**. It applies data preprocessing, feature engineering, and advanced ensemble machine learning techniques to identify customers who are most likely to leave a telecom service provider.
 
-### Dataset Source 
+---
 
-* [Kaggle Dataset URL](https://www.kaggle.com/blastchar/telco-customer-churn)
-* [GitHub Dataset URL](https://github.com/IBM/telco-customer-churn-on-icp4d/tree/master/data)
+## 🚀 Project Description
 
-### Streamlit App repository 
-* [Telco Customer Churn Prediction Streamlit App](https://github.com/ahmedshahriar/Telco-Customer-Churn-Prediction-Streamlit-App)
+- **Objective**: Predict whether a customer will churn based on their demographic, contract, and service-related details.  
+- **Dataset**: Telco-Customer-Churn (cleaned CSV provided in repo).  
+- **Approach**:
+  - Exploratory Data Analysis (EDA)
+  - Feature engineering & encoding
+  - Model training using XGBoost, LightGBM, and CatBoost
+  - Hyperparameter tuning with **Optuna**
+  - Ensemble stacking for improved performance  
+- **Result**: Final model achieves ~0.85 AUC score on the test set.  
 
-### You can also view this notebook on kaggle
-1. [Churn Prediction I : EDA+Statistical Analysis](https://www.kaggle.com/ahmedshahriarsakib/churn-prediction-i-eda-statistical-analysis)
-2. [Churn Prediction II : Triple Boost Stacking+  Optuna](https://www.kaggle.com/ahmedshahriarsakib/churn-prediction-ii-triple-boost-stacking-optuna)
+---
 
-### This project also serves as assignments for the courses below - 
-1. [IBM Exploratory Data Analysis for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning?specialization=ibm-machine-learning)
-2. [IBM Supervised Machine Learning: Classification](https://www.coursera.org/learn/supervised-machine-learning-classification?specialization=ibm-machine-learning)
+## 🛠️ Tech Stack & Libraries
 
-## Summary
+- **Language**: Python 3.x  
+- **Core Libraries**:  
+  - `scikit-learn`  
+  - `xgboost`  
+  - `lightgbm`  
+  - `catboost`  
+  - `optuna`  
+  - `numpy`, `pandas`  
+  - `matplotlib`, `seaborn`, `plotly`  
 
-* Dataset mostly has categorical variables
-* Data is not normally distributed, performed Nonparametric Statistical tests
-* Performed statistical hypothesis test to check correlation , multicollinearity
-* Imbalanced dataset, did experiment with different sampling techniques(e.g stratifying, imblearn - SMOTE etc)
-* Tuned Hyperparameters using Optuna
-* Performed single level Stacking Ensemble with Triple Gradient boosting algorithms and classic algorithms
-* Number of months the customer has stayed with the company (tenure) and the contract term of the customer (contract) are the most important features that have strong correlation with churn of the customer
-* Results from statiscial hypotheses testing reflects similarity with model feature importance
-* With 80/20 train/test split triple boosting stacking ensemble model achieved an AUC of ~0.85
+---
 
-### Built With
+## 📂 Project Structure
 
-```
-optuna==2.10.0
-xgboost==0.90
-catboost==1.0.1
-lightgbm==2.2.3
-plotly==4.4.1
-scipy==1.7.1
-scikit-learn==0.22.2.post1
-```
-=======
-# IBM Telco Customer Churn Prediction
-[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter)](https://jupyter.org/try) [![Open in HTML](https://img.shields.io/badge/Html-Open%20Notebook-blue?logo=HTML5)](https://nbviewer.org/github/ahmedshahriar/Customer-Churn-Prediction/blob/main/Telco-Customer-Churn-Prediction.html) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahmedshahriar/Customer-Churn-Prediction/main) [![Live in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io//ahmedshahriar/Telco-Customer-Churn-Prediction-Streamlit-App/main/app.py)
+Customer-Churn-Prediction/
+│── Telco-Customer-Churn-dataset-cleaned.csv # Cleaned dataset
+│── Telco-Customer-Churn-Prediction.ipynb # Main Jupyter Notebook
+│── Telco-Customer-Churn-Prediction.html # Notebook HTML export
+│── XGB_Hyperparameter.pickle # Saved XGBoost best params
+│── LGBM_Hyperparameter.pickle # Saved LightGBM best params
+│── CatBoost_Hyperparameter.pickle # Saved CatBoost best params
+│── model_catboost/ # Trained CatBoost model files
+│── catboost_info/ # CatBoost logs/info
+│── requirements.txt # Dependencies
+│── README.md # Project documentation
 
-The objective of this notebook is to present an extensive analysis of the **IBM Customer Churn Dataset** and to predict the customer churn rate.
+yaml
+Copy code
 
-### Dataset Source 
+---
 
-* [Kaggle Dataset URL](https://www.kaggle.com/blastchar/telco-customer-churn)
-* [GitHub Dataset URL](https://github.com/IBM/telco-customer-churn-on-icp4d/tree/master/data)
+## ⚙️ Requirements
 
-### Streamlit App repository 
-* [Telco Customer Churn Prediction Streamlit App](https://github.com/ahmedshahriar/Telco-Customer-Churn-Prediction-Streamlit-App)
+Make sure you have **Python 3.x** installed. Then install the required libraries:
 
-### You can also view this notebook on kaggle
-1. [Churn Prediction I : EDA+Statistical Analysis](https://www.kaggle.com/ahmedshahriarsakib/churn-prediction-i-eda-statistical-analysis)
-2. [Churn Prediction II : Triple Boost Stacking+  Optuna](https://www.kaggle.com/ahmedshahriarsakib/churn-prediction-ii-triple-boost-stacking-optuna)
+```bash
+pip install -r requirements.txt
+🗄️ Database / Data Setup
+No external database required.
 
-### This project also serves as assignments for the courses below - 
-1. [IBM Exploratory Data Analysis for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning?specialization=ibm-machine-learning)
-2. [IBM Supervised Machine Learning: Classification](https://www.coursera.org/learn/supervised-machine-learning-classification?specialization=ibm-machine-learning)
+Data is already provided in CSV format: Telco-Customer-Churn-dataset-cleaned.csv
 
-## Summary
+If needed, you can import the CSV into a database like MySQL/Postgres and update the notebook to fetch from there.
 
-* Dataset mostly has categorical variables
-* Data is not normally distributed, performed Nonparametric Statistical tests
-* Performed statistical hypothesis test to check correlation , multicollinearity
-* Imbalanced dataset, did experiment with different sampling techniques(e.g stratifying, imblearn - SMOTE etc)
-* Tuned Hyperparameters using Optuna
-* Performed single level Stacking Ensemble with Triple Gradient boosting algorithms and classic algorithms
-* Number of months the customer has stayed with the company (tenure) and the contract term of the customer (contract) are the most important features that have strong correlation with churn of the customer
-* Results from statiscial hypotheses testing reflects similarity with model feature importance
-* With 80/20 train/test split triple boosting stacking ensemble model achieved an AUC of ~0.85
+▶️ How to Run Locally
+Clone the Repository
 
-### Built With
+bash
+Copy code
+git clone https://github.com/vishred06-cmd/Customer-Churn-Prediction.git
+cd Customer-Churn-Prediction
+Create Virtual Environment (optional but recommended)
 
-```
-optuna==2.10.0
-xgboost==0.90
-catboost==1.0.1
-lightgbm==2.2.3
-plotly==4.4.1
-scipy==1.7.1
-scikit-learn==0.22.2.post1
-```
->>>>>>> ebe8f3ccae65efebe483bc3a8763c145a3a68998
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+Install Dependencies
+
+bash
+Copy code
+pip install -r requirements.txt
+Run the Jupyter Notebook
+
+bash
+Copy code
+jupyter notebook Telco-Customer-Churn-Prediction.ipynb
+👉 Alternatively, open the HTML file:
+Telco-Customer-Churn-Prediction.html in your browser to view results directly.
+
+Using Saved Models / Hyperparameters
+
+Pre-tuned hyperparameters (.pickle files) are available for direct use.
+
+The CatBoost model inside model_catboost/ can be loaded for predictions.
+
+📜 License
+This project is licensed under the MIT License. You are free to use, modify, and distribute with attribution.
+
+🙌 Acknowledgements
+Dataset: IBM Telco Customer Churn Dataset (commonly available via Kaggle).
+
+Thanks to open-source contributors of Scikit-learn, XGBoost, LightGBM, CatBoost, and Optuna.
